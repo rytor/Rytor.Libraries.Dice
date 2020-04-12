@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Rytor.Libraries.Dice
 {
@@ -11,7 +9,7 @@ namespace Rytor.Libraries.Dice
         public Dice(int numberOfDice, int numberOfSides)
         {
             Set = new List<Die>();
-            
+
             for (int i = 0; i < numberOfDice; i++)
             {
                 Set.Add(new Die(numberOfSides));

@@ -1,6 +1,4 @@
-using System;
 using Xunit;
-using Rytor.Libraries.Dice;
 
 namespace Rytor.Libraries.Dice.Tests
 {
