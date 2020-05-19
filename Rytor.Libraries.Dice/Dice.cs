@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Rytor.Libraries.Dice
 {
@@ -16,14 +17,14 @@ namespace Rytor.Libraries.Dice
             }
         }
 
-        public List<Die> Roll()
+        public RollResult Roll()
         {
             for (int i = 0; i < Set.Count; i++)
             {
                 Set[i].Roll();
             }
 
-            return Set;
+            return new RollResult {Total = Set.Sum(x => x.Value), Dice = Set};
         }
     }
 }

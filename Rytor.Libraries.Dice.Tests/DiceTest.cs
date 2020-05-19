@@ -16,9 +16,10 @@ namespace Rytor.Libraries.Dice.Tests
         [Fact]
         public void Dice_2Set_6Side_CanRoll_ReturnTrue()
         {
-            TwoSixSidedDice.Roll();
-            Assert.True(TwoSixSidedDice.Set[0].Value >= 1 && TwoSixSidedDice.Set[0].Value <= 6);
-            Assert.True(TwoSixSidedDice.Set[1].Value >= 1 && TwoSixSidedDice.Set[1].Value <= 6);
+            RollResult result = TwoSixSidedDice.Roll();
+            Assert.True(result.Dice[0].Value >= 1 && result.Dice[0].Value <= 6);
+            Assert.True(result.Dice[1].Value >= 1 && result.Dice[1].Value <= 6);
+            Assert.True(result.Total > 0);
         }
     }
 }
