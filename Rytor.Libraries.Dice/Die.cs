@@ -17,7 +17,7 @@ namespace Rytor.Libraries.Dice
 
         public int Roll()
         {
-            Value = _random.Next(NumberOfSides);
+            Value = _random.Next(1, NumberOfSides);
             return Value;
         }
     }
