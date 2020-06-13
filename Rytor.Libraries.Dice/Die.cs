@@ -17,7 +17,8 @@ namespace Rytor.Libraries.Dice
 
         public int Roll()
         {
-            Value = _random.Next(1, NumberOfSides);
+            //Random.Next uses an inclusive lower bound, but an exclusive upper bound
+            Value = _random.Next(1, NumberOfSides+1);
             return Value;
         }
     }
